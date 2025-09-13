@@ -48,8 +48,9 @@ class CognitoEventMapperUnitTest {
             assertThat(result.getCreatedAt()).isNotNull();
             
             Instant createdAt = Instant.parse(result.getCreatedAt());
-            assertThat(createdAt).isAfterOrEqualTo(beforeConversion);
-            assertThat(createdAt).isBeforeOrEqualTo(afterConversion);
+            assertThat(createdAt)
+                    .isAfterOrEqualTo(beforeConversion)
+                    .isBeforeOrEqualTo(afterConversion);
         }
 
         @Test
@@ -227,8 +228,9 @@ class CognitoEventMapperUnitTest {
             Instant afterConversion = Instant.now();
             Instant createdAt = Instant.parse(result.getCreatedAt());
             
-            assertThat(createdAt).isAfterOrEqualTo(beforeConversion);
-            assertThat(createdAt).isBeforeOrEqualTo(afterConversion);
+            assertThat(createdAt)
+                    .isAfterOrEqualTo(beforeConversion)
+                    .isBeforeOrEqualTo(afterConversion);
         }
     }
 

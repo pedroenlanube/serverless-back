@@ -72,8 +72,9 @@ class UserEntityUnitTest {
             Instant afterCreation = Instant.now();
             Instant createdAt = Instant.parse(result.getCreatedAt());
             
-            assertThat(createdAt).isAfterOrEqualTo(beforeCreation);
-            assertThat(createdAt).isBeforeOrEqualTo(afterCreation);
+            assertThat(createdAt)
+                    .isAfterOrEqualTo(beforeCreation)
+                    .isBeforeOrEqualTo(afterCreation);
         }
 
         @Test

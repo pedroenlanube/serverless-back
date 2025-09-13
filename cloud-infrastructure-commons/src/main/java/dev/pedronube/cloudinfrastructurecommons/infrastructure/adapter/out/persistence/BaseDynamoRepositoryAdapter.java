@@ -41,7 +41,7 @@ public abstract class BaseDynamoRepositoryAdapter<T> implements QueryableReposit
                         .build())
                 .items()
                 .stream()
-                .collect(Collectors.toList());
+                .toList();
     }
 
     @Override
@@ -53,7 +53,7 @@ public abstract class BaseDynamoRepositoryAdapter<T> implements QueryableReposit
                         Map.of("PK", AttributeValue.builder().s(lastKey).build()) : null)
                 .build();
 
-        return table.scan(request).items().stream().collect(Collectors.toList());
+        return table.scan(request).items().stream().toList();
     }
 
     @Override

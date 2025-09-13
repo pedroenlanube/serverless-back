@@ -65,8 +65,9 @@ class CognitoPostConfirmationServiceUnitTest {
             CognitoUserPoolPostConfirmationEvent result = function.apply(event);
 
             // Then
-            assertThat(result).isNotNull();
-            assertThat(result).isSameAs(event); // Should return the same event
+            assertThat(result)
+                    .isNotNull()
+                    .isSameAs(event); // Should return the same event
         }
     }
 

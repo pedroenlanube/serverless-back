@@ -2,12 +2,14 @@ package dev.pedronube.cognitointegration.infrastructure.adapter.in.web.mapper;
 
 import com.amazonaws.services.lambda.runtime.events.CognitoUserPoolPostConfirmationEvent;
 import dev.pedronube.domaincommons.domain.model.user.User;
+import lombok.NoArgsConstructor;
 
 import java.time.Instant;
 import java.util.Map;
 import java.util.Optional;
 import java.util.function.Function;
 
+@NoArgsConstructor(access = lombok.AccessLevel.PRIVATE)
 public final class CognitoEventMapper {
 
     public static final Function<CognitoUserPoolPostConfirmationEvent, User> toDomain =

@@ -13,10 +13,8 @@ import software.amazon.awssdk.enhanced.dynamodb.*;
 
 import software.amazon.awssdk.enhanced.dynamodb.model.PageIterable;
 import software.amazon.awssdk.enhanced.dynamodb.model.ScanEnhancedRequest;
-import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -105,8 +103,9 @@ class BaseDynamoRepositoryAdapterUnitTest {
             Optional<UserEntity> result = adapter.findById(id);
 
             // Then
-            assertThat(result).isPresent();
-            assertThat(result.get()).isEqualTo(expectedEntity);
+            assertThat(result)
+                    .isPresent()
+                    .contains(expectedEntity);
             verify(mockTable).getItem(any(Key.class));
         }
 
@@ -142,8 +141,9 @@ class BaseDynamoRepositoryAdapterUnitTest {
             List<UserEntity> result = adapter.findByAttribute(attributeName, value);
 
             // Then
-            assertThat(result).hasSize(2);
-            assertThat(result).containsExactly(entity1, entity2);
+            assertThat(result)
+                    .hasSize(2)
+                    .containsExactly(entity1, entity2);
             verify(mockTable).scan(any(ScanEnhancedRequest.class));
         }
 
