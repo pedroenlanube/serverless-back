@@ -33,7 +33,6 @@ module "cognito_integration_service" {
   api_execution_arn = module.shared_infrastructure.api_execution_arn
   users_table_name = module.shared_infrastructure.users_table_name
   users_table_arn = module.shared_infrastructure.users_table_arn
-  cognito_user_pool_id = "pedronube-dev-users"
   environment = var.environment
   project_name = var.project_name
 }

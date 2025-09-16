@@ -43,6 +43,7 @@
         <lombok.version>1.18.30</lombok.version>
         <jackson.version>2.17.2</jackson.version>
         <org.mapstruct.version>1.6.3</org.mapstruct.version>
+        <logstash.logback.encoder.version>8.1</logstash.logback.encoder.version>
 
         <!-- Dependencias para testing -->
         <spring.boot.version>3.5.4</spring.boot.version>
@@ -170,6 +171,13 @@
                 <artifactId>jjwt-jackson</artifactId>
                 <scope>runtime</scope>
                 <version>${jsonwebtoken.version}</version>
+            </dependency>
+
+            <!-- Utilidades - Logging -->
+            <dependency>
+                <groupId>net.logstash.logback</groupId>
+                <artifactId>logstash-logback-encoder</artifactId>
+                <version>${logstash.logback.encoder.version}</version>
             </dependency>
 
             <!-- Utilidades - Boilerplate -->
