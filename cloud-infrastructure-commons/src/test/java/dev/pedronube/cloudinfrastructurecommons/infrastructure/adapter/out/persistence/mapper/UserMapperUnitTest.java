@@ -2,7 +2,6 @@ package dev.pedronube.cloudinfrastructurecommons.infrastructure.adapter.out.pers
 
 import dev.pedronube.cloudinfrastructurecommons.infrastructure.adapter.out.persistence.entity.UserEntity;
 import dev.pedronube.cloudinfrastructurecommons.infrastructure.adapter.out.persistence.entity.mapper.UserEntityFactory;
-import dev.pedronube.cloudinfrastructurecommons.infrastructure.adapter.out.persistence.mapper.impl.UserMapper;
 import dev.pedronube.domaincommons.domain.model.user.User;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Nested;

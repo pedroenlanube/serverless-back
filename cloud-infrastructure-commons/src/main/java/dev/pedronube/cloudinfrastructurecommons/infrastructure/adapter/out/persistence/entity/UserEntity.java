@@ -1,16 +1,19 @@
 package dev.pedronube.cloudinfrastructurecommons.infrastructure.adapter.out.persistence.entity;
 
 import lombok.*;
-import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.DynamoDbBean;
+import lombok.experimental.SuperBuilder;
+import software.amazon.awssdk.enhanced.dynamodb.mapper.annotations.*;
 
-@Data
+@Getter
+@Setter
+@ToString(callSuper = true)
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @EqualsAndHashCode(callSuper = true)
+@SuperBuilder
 @DynamoDbBean
 public class UserEntity extends BaseEntity {
-    private String sub; // El ID de Cognito
+    private String sub;
     private String username;
     private String email;
     private String subscriptionLevel;
