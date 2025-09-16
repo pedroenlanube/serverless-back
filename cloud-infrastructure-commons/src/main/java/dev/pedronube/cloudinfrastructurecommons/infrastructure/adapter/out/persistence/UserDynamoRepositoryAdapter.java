@@ -1,7 +1,7 @@
 package dev.pedronube.cloudinfrastructurecommons.infrastructure.adapter.out.persistence;
 
 import dev.pedronube.cloudinfrastructurecommons.infrastructure.adapter.out.persistence.entity.UserEntity;
-import dev.pedronube.cloudinfrastructurecommons.infrastructure.adapter.out.persistence.mapper.impl.UserMapper;
+import dev.pedronube.cloudinfrastructurecommons.infrastructure.adapter.out.persistence.mapper.UserMapper;
 import dev.pedronube.domaincommons.domain.port.out.repository.user.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -2,9 +2,11 @@ package dev.pedronube.cloudinfrastructurecommons.infrastructure.adapter.out.pers
 
 import dev.pedronube.cloudinfrastructurecommons.infrastructure.adapter.out.persistence.entity.UserEntity;
 import lombok.NoArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 import java.time.Instant;
 
+@Slf4j
 @NoArgsConstructor(access = lombok.AccessLevel.PRIVATE)
 public class UserEntityFactory {
 
@@ -22,7 +24,7 @@ public class UserEntityFactory {
         // en la capa de adaptación a la infraestructura.
         entity.setPk("USER#" + sub);
         entity.setSk("PROFILE");
-
+        log.info("[UserEntityFactory_mayus] Creada entidad de usuario: {}", entity);
         return entity;
     }
 }

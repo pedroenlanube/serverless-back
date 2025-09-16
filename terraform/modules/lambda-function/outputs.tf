@@ -20,10 +20,10 @@ output "invoke_arn" {
 
 output "integration_id" {
   description = "API Gateway integration ID"
-  value       = aws_apigatewayv2_integration.this.id
+  value       = var.api_id != "" ? aws_apigatewayv2_integration.this[0].id : null
 }
 
 output "route_id" {
   description = "API Gateway route ID"
-  value       = aws_apigatewayv2_route.this.id
+  value       = var.api_id != "" ? aws_apigatewayv2_route.this[0].id : null
 }

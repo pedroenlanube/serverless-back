@@ -1,6 +1,7 @@
 package dev.pedronube.cloudinfrastructurecommons.infrastructure.adapter.out.persistence;
 
 import dev.pedronube.domaincommons.domain.port.out.repository.QueryableRepositoryPort;
+import lombok.extern.slf4j.Slf4j;
 import software.amazon.awssdk.enhanced.dynamodb.*;
 import software.amazon.awssdk.enhanced.dynamodb.model.ScanEnhancedRequest;
 import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
@@ -8,8 +9,8 @@ import software.amazon.awssdk.services.dynamodb.model.AttributeValue;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
+@Slf4j
 public abstract class BaseDynamoRepositoryAdapter<T> implements QueryableRepositoryPort<T> {
 
     protected final DynamoDbEnhancedClient client;
@@ -27,6 +28,7 @@ public abstract class BaseDynamoRepositoryAdapter<T> implements QueryableReposit
 
     @Override
     public void save(T entity) {
+        log.info("[BaseDynamoRepositoryAdapter] Saving entity: {}", entity);
         table.putItem(entity);
     }
 

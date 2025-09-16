@@ -13,7 +13,7 @@ output "users_table_name" {
   value       = module.shared_infrastructure.users_table_name
 }
 
-output "login_function_arn" {
-  description = "Login function ARN"
-  value       = module.authentication_service.login_function_arn
+output "post_confirmation_function_arn" {
+  description = "Post-confirmation function ARN"
+  value       = module.cognito_integration_service.post_confirmation_function_arn
 }

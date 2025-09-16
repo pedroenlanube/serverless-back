@@ -18,10 +18,7 @@ variable "users_table_arn" {
   type        = string
 }
 
-variable "cognito_user_pool_id" {
-  description = "Cognito User Pool ID"
-  type        = string
-}
+
 
 variable "environment" {
   description = "Environment name"
