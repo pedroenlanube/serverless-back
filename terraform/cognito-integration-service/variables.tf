@@ -8,13 +8,13 @@ variable "api_execution_arn" {
   type        = string
 }
 
-variable "users_table_name" {
-  description = "DynamoDB users table name"
+variable "global_table_name" {
+  description = "DynamoDB global table name"
   type        = string
 }
 
-variable "users_table_arn" {
-  description = "DynamoDB users table ARN"
+variable "global_table_arn" {
+  description = "DynamoDB global table ARN"
   type        = string
 }
 

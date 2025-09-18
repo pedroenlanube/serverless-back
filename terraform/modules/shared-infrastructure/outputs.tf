@@ -13,12 +13,12 @@ output "api_execution_arn" {
   value       = aws_apigatewayv2_api.main.execution_arn
 }
 
-output "users_table_name" {
+output "global_table_name" {
   description = "Main table name"
   value       = aws_dynamodb_table.main.name
 }
 
-output "users_table_arn" {
+output "global_table_arn" {
   description = "Main table ARN"
   value       = aws_dynamodb_table.main.arn
 }

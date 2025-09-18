@@ -8,9 +8,9 @@ output "api_id" {
   value       = module.shared_infrastructure.api_id
 }
 
-output "users_table_name" {
-  description = "Users table name"
-  value       = module.shared_infrastructure.users_table_name
+output "global_table_name" {
+  description = "Global table name"
+  value       = module.shared_infrastructure.global_table_name
 }
 
 output "post_confirmation_function_arn" {

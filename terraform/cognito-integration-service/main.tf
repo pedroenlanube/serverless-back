@@ -32,7 +32,7 @@ module "post_confirmation_function" {
     {
       Effect = "Allow"
       Action = ["dynamodb:PutItem"]
-      Resource = var.users_table_arn
+      Resource = var.global_table_arn
     }
   ]
   

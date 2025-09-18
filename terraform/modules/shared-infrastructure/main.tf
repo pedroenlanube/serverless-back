@@ -13,7 +13,7 @@ resource "aws_servicecatalogappregistry_application" "main" {
 
 # DynamoDB Single Table
 resource "aws_dynamodb_table" "main" {
-  name           = "serverless-back-table"
+  name           = "pedronube-nexus-table"
   billing_mode   = "PAY_PER_REQUEST"
   hash_key       = "PK"
   range_key      = "SK"
@@ -22,7 +22,7 @@ resource "aws_dynamodb_table" "main" {
     name = "PK"
     type = "S"
   }
-  
+
   attribute {
     name = "SK" 
     type = "S"

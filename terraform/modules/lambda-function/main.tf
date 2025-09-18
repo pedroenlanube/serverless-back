@@ -10,7 +10,7 @@ resource "aws_lambda_function" "this" {
   runtime      = var.runtime
   timeout      = var.timeout
   memory_size  = var.memory_size
-  architectures = ["x86_64"]
+  architectures = ["arm64"]
   publish      = true
   
   filename         = var.zip_file

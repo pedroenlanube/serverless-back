@@ -16,8 +16,7 @@ public abstract class BaseDynamoRepositoryAdapter<T> implements QueryableReposit
     protected final DynamoDbEnhancedClient client;
     protected DynamoDbTable<T> table;
 
-    // TABLA ÚNICA para todos los adaptadores
-    private static final String SINGLE_TABLE_NAME = "serverless-back-table";
+    private static final String SINGLE_TABLE_NAME = "pedronube-nexus-table";
 
     protected BaseDynamoRepositoryAdapter(DynamoDbEnhancedClient client) {
         this.client = client;

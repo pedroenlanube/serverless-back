@@ -31,8 +31,8 @@ module "cognito_integration_service" {
   
   api_id = module.shared_infrastructure.api_id
   api_execution_arn = module.shared_infrastructure.api_execution_arn
-  users_table_name = module.shared_infrastructure.users_table_name
-  users_table_arn = module.shared_infrastructure.users_table_arn
+  global_table_name = module.shared_infrastructure.global_table_name
+  global_table_arn = module.shared_infrastructure.global_table_arn
   environment = var.environment
   project_name = var.project_name
 }
