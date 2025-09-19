@@ -39,10 +39,8 @@
         <amazon.sdk.ssm.version>2.20.73</amazon.sdk.ssm.version>
 
         <!-- Utilidades -->
-        <jsonwebtoken.version>0.12.6</jsonwebtoken.version>
         <lombok.version>1.18.30</lombok.version>
         <jackson.version>2.17.2</jackson.version>
-        <org.mapstruct.version>1.6.3</org.mapstruct.version>
         <logstash.logback.encoder.version>8.1</logstash.logback.encoder.version>
 
         <!-- Dependencias para testing -->
@@ -154,25 +152,6 @@
                 <version>${jackson.version}</version>
             </dependency>
 
-            <!-- Utilidades - JWT -->
-            <dependency>
-                <groupId>io.jsonwebtoken</groupId>
-                <artifactId>jjwt-api</artifactId>
-                <version>${jsonwebtoken.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.jsonwebtoken</groupId>
-                <artifactId>jjwt-impl</artifactId>
-                <scope>runtime</scope>
-                <version>${jsonwebtoken.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.jsonwebtoken</groupId>
-                <artifactId>jjwt-jackson</artifactId>
-                <scope>runtime</scope>
-                <version>${jsonwebtoken.version}</version>
-            </dependency>
-
             <!-- Utilidades - Logging -->
             <dependency>
                 <groupId>net.logstash.logback</groupId>
@@ -186,17 +165,6 @@
                 <artifactId>lombok</artifactId>
                 <scope>provided</scope>
                 <version>${lombok.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mapstruct</groupId>
-                <artifactId>mapstruct</artifactId>
-                <version>${org.mapstruct.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mapstruct</groupId>
-                <artifactId>mapstruct-processor</artifactId>
-                <version>${org.mapstruct.version}</version>
-                <scope>provided</scope>
             </dependency>
 
             <!-- Testing - Dependencias para pruebas unitarias -->
@@ -218,29 +186,6 @@
                     <configuration>
                         <source>${maven.compiler.source}</source>
                         <target>${maven.compiler.target}</target>
-                        <annotationProcessorPaths>
-                            <!-- Procesador de MapStruct -->
-                            <path>
-                                <groupId>org.mapstruct</groupId>
-                                <artifactId>mapstruct-processor</artifactId>
-                                <version>${org.mapstruct.version}</version>
-                            </path>
-                            <!-- Procesador de Lombok -->
-                            <path>
-                                <groupId>org.projectlombok</groupId>
-                                <artifactId>lombok</artifactId>
-                                <version>${lombok.version}</version>
-                            </path>
-                            <!--
-                            Opcional pero recomendado:
-                            Hace que Lombok y MapStruct trabajen mejor juntos.
-                            -->
-                            <path>
-                                <groupId>org.projectlombok</groupId>
-                                <artifactId>lombok-mapstruct-binding</artifactId>
-                                <version>0.2.0</version>
-                            </path>
-                        </annotationProcessorPaths>
                     </configuration>
                 </plugin>
                 <plugin>
