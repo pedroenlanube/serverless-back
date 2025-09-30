@@ -1,0 +1,4 @@
+name: Reusable CI.yaml
+on:
+
+jobs:
